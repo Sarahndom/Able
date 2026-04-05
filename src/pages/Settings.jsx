@@ -8,8 +8,7 @@ function Settings() {
         localStorage.clear();
         alert("Account deleted");
         window.location.reload();
-    };
-
+    }
     return (
         <div>
             <h2>Settings</h2>

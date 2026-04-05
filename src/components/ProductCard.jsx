@@ -45,8 +45,8 @@ const ProductCard = ({ p, onAdd, onNav }) => {
 
                 <span
                     className={`absolute top-2 right-2 text-xs px-2 py-0.5 rounded-full font-bold ${p.stock > 0
-                            ? 'bg-green-900 text-green-300'
-                            : 'bg-red-900 text-red-300'
+                        ? 'bg-green-900 text-green-300'
+                        : 'bg-red-900 text-red-300'
                         }`}
                 >
                     {p.stock > 0 ? 'In Stock' : 'Out of Stock'}
@@ -57,7 +57,7 @@ const ProductCard = ({ p, onAdd, onNav }) => {
                 <p className="text-gray-500 text-xs mb-0.5">{p.brand}</p>
 
                 <h3
-                    className="text-white text-sm font-semibold mb-2 cursor-pointer hover:text-yellow-400"
+                    className="text-white text-sm font-semibold mb-2 cursor-pointer hover:text-blue-400"
                     onClick={() => onNav('product-detail', p)}
                 >
                     {p.name}
@@ -72,7 +72,7 @@ const ProductCard = ({ p, onAdd, onNav }) => {
 
                 <div className="flex items-center justify-between mt-auto">
                     <div>
-                        <span className="text-yellow-400 font-bold text-lg">
+                        <span className="text-blue-400 font-bold text-lg">
                             ${p.price}
                         </span>
                     </div>
@@ -84,7 +84,7 @@ const ProductCard = ({ p, onAdd, onNav }) => {
                                 dispatch({ type: "ADD", product: p })
                             }
                             disabled={p.stock === 0}
-                            className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-40 text-black text-xs font-bold px-3 py-2 rounded-lg"
+                            className="bg-blue-500 hover:bg-blue-400 disabled:opacity-40 text-black text-xs font-bold px-3 py-2 rounded-lg"
                         >
                             + Cart
                         </button>

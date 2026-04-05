@@ -46,10 +46,9 @@ function ShopPage({ onNav, onAdd, initialQ = '', initialCat = '' }) {
             <div className="flex flex-col lg:flex-row gap-6">
 
                 {/* SIDEBAR */}
-                <aside className="lg:w-60 flex-shrink-0">
+                {/* <aside className="lg:w-60 flex-shrink-0">
                     <div className="bg-gray-800 rounded-2xl p-5 space-y-6 sticky top-20">
 
-                        {/* ✅ FIXED SEARCH */}
                         <form onSubmit={handleSearch}>
                             <p className="text-white font-bold text-sm mb-2">Search</p>
                             <div className="flex gap-2">
@@ -57,18 +56,17 @@ function ShopPage({ onNav, onAdd, initialQ = '', initialCat = '' }) {
                                     value={q}
                                     onChange={e => setQ(e.target.value)}
                                     placeholder="Search products…"
-                                    className="flex-1 bg-gray-700 text-white px-3 py-2 rounded-xl border border-gray-600 focus:outline-none focus:border-yellow-500 text-sm"
+                                    className="flex-1 bg-gray-700 text-white px-3 py-2 rounded-xl border border-gray-600 focus:outline-none focus:border-blue-500 text-sm"
                                 />
                                 <button
                                     type="submit"
-                                    className="bg-yellow-500 hover:bg-yellow-400 text-black px-3 rounded-xl text-sm font-bold"
+                                    className="bg-blue-500 hover:bg-blue-400 text-black px-3 rounded-xl text-sm font-bold"
                                 >
                                     🔍
                                 </button>
                             </div>
                         </form>
 
-                        {/* CATEGORY */}
                         <div>
                             <p className="text-white font-bold text-sm mb-2">Category</p>
                             <div className="space-y-1.5">
@@ -79,7 +77,7 @@ function ShopPage({ onNav, onAdd, initialQ = '', initialCat = '' }) {
                                             name="cat"
                                             checked={cat === c}
                                             onChange={() => setCat(c)}
-                                            className="accent-yellow-500"
+                                            className="accent-blue-500"
                                         />
                                         <span className="text-gray-300 text-sm">
                                             {c || 'All'}
@@ -89,10 +87,9 @@ function ShopPage({ onNav, onAdd, initialQ = '', initialCat = '' }) {
                             </div>
                         </div>
 
-                        {/* PRICE */}
                         <div>
                             <p className="text-white font-bold text-sm mb-2">
-                                Max Price: <span className="text-yellow-400">${maxPrice}</span>
+                                Max Price: <span className="text-blue-400">${maxPrice}</span>
                             </p>
                             <input
                                 type="range"
@@ -101,14 +98,13 @@ function ShopPage({ onNav, onAdd, initialQ = '', initialCat = '' }) {
                                 step="50"
                                 value={maxPrice}
                                 onChange={e => setMaxPrice(+e.target.value)}
-                                className="w-full accent-yellow-500"
+                                className="w-full accent-blue-500"
                             />
                         </div>
 
-                        {/* RATING */}
                         <div>
                             <p className="text-white font-bold text-sm mb-2">
-                                Min Rating: <span className="text-yellow-400">{minRating}★</span>
+                                Min Rating: <span className="text-blue-400">{minRating}★</span>
                             </p>
                             <input
                                 type="range"
@@ -117,7 +113,7 @@ function ShopPage({ onNav, onAdd, initialQ = '', initialCat = '' }) {
                                 step="0.5"
                                 value={minRating}
                                 onChange={e => setMinRating(+e.target.value)}
-                                className="w-full accent-yellow-500"
+                                className="w-full accent-blue-500"
                             />
                         </div>
 
@@ -133,7 +129,7 @@ function ShopPage({ onNav, onAdd, initialQ = '', initialCat = '' }) {
                             Reset Filters
                         </button>
                     </div>
-                </aside>
+                </aside> */}
 
                 {/* PRODUCTS */}
                 <div className="flex-1">
@@ -145,8 +141,8 @@ function ShopPage({ onNav, onAdd, initialQ = '', initialCat = '' }) {
                                     key={c}
                                     onClick={() => setCat(cat === c ? '' : c)}
                                     className={`text-xs px-4 py-1.5 rounded-full font-semibold ${cat === c
-                                            ? 'bg-yellow-500 text-black'
-                                            : 'bg-gray-700 text-gray-300'
+                                        ? 'bg-blue-500 text-black'
+                                        : 'bg-gray-700 text-gray-300'
                                         }`}
                                 >
                                     {c}
